@@ -48,3 +48,82 @@
 | 46 | [Single and cross-database benchmarks for gender classification under unconstrained settings](https://ieeexplore.ieee.org/document/6130514)                                                                                                                 | Pablo Dago-Casas; Daniel González-Jiménez; Long Long Yu; José Luis Alba-Castro                                       | 2011 IEEE International Conference on Computer Vision Workshops (ICCV Workshops)                                          | 2011       | Gender                     |                                                                                 | Image        | LFW; Gallafgher's database                                                                                                                                                                                   | Gallagher's databse: 28,231 labeled face images; LFW: 13,233 labeled images from 5749 individuals                                                                                                                              |                                                                      |
 | 47 | [Revisiting Linear Discriminant Techniques in Gender Recognition](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5661777)                                                                                                                             | J. Bekios-Calfa, J. Buenaposada, and L. Baumela.                                                                     | IEEE Transactions on Pattern Analysis and Machine Intelligence                                                            | 2011       | Gender                     |                                                                                 | Image        | Nonpublic databse from UCN in Chile (UCN database), the Color FERET database, the Productive Aging Lab database from University of Texas at Dallas                                                           | UCN: 5628 male images of 5646 male and 5041 female images of 5054 female; Color FERET: 402 female images; PAL Databse: 219 male and 367 female subjects                                                                        |                                                                      |
 | 48 | [Real Time Emotion Recognition and Gender Classification](https://ieeexplore.ieee.org/document/9299633)                                                                                                                                                     | Uttara Gogate; Alap Parate; Shubham Sah; Sagar Narayanan                                                             | 2020 International Conference on Smart Innovations in Design, Environment, Management, Planning and Computing (ICSIDEMPC) | 2020       | Gender                     | https://paperswithcode.com/paper/real-time-convolutional-neural-networks-for    | Image, Video | IMDb database                                                                                                                                                                                                | 460,723 RGB images                                                                                                                                                                                                             |                                                                      |
+
+
+
+
+The table is a literature review of papers revolving around detection of gender and/or race of faces in images. The literature can be broadly divided into two categories: Firstly, detecting race/gender of people in images and secondly, detecting and mitigating bias in gender/race detecting algorithms. The table consist of the following columns: Title, authors of the paper, date the paper was published, the conference in which it was published, the data resources, the type of media the dataset consists of, the github repository of the paper, the number of observations in the dataset used to train and/or evaluate the algorithms, the metric used to evaluate the methods in the paper and the highest value achieved for the metric amongst the different metrics used. The most common datasets that are used for training and evaluation are: COCO, LFW, FERET, MS CELEB, UTK Face. The literature in the table consists of 37 papers that deal with gender classification whereas 17 papers that deal with race classification algorithms. 
+
+**Gender Detection in Images**
+
+In the field of gender detection in images, two primary categories of research have emerged. The first category focuses on the direct detection of gender in face images. Initially, older methods employed Adaboost models as feature extractors or paired them with LBP operators as texture descriptors, which were then fed to SVM models. However, more recent methodologies have adopted advanced techniques such as Multi-Layer Perceptron (MLP) architectures or Convolutional Neural Networks (CNNs) for more accurate gender classification in images. These modern approaches have significantly improved performance.
+
+The second category within gender detection research is centered on detecting and mitigating bias in gender detection algorithms. Several methods have been proposed to address bias in gender classification, including:
+
+1. Post-processing Methodology: Transforming the deep embeddings of pre-trained models to provide better representation for discriminated subgroups.
+2. Posterior Sampling of Data: Implemented using Langevin dynamics to mitigate bias in gender classification.
+3. Adversarial Debiasing Approach: Leveraging adversarial training to reduce bias in gender detection models.
+4. Progressively Growing Conditional GAN (Generative Adversarial Network): Used for image generation and bias reduction.
+5. Domain Discriminative Training: Aimed at bias amplification reduction and prior shift inference.
+6. Domain Independent Training: Developing models that are less dependent on specific domains.
+7. Adaptive Margin Learning:  Learning balanced performance for different genders based on large margin losses.
+8. Domain Frequency Indicator: A technique to judge whether a sample is from the head domains or tail domain, helping to address bias.
+
+These methods collectively contribute to the ongoing effort to improve the accuracy and fairness of gender detection algorithms.
+
+**Race Detection in Images**
+
+Similarly, research on race detection in images can be categorized into two primary areas. The first involves the direct detection of race in face images. In recent studies, ResNet has emerged as a commonly used model architecture for race detection in images, delivering robust results.
+
+The second category within race detection research is dedicated to identifying and mitigating bias in race detection algorithms. Some researchers have applied pre-processing and post-processing methods similar to those used in gender detection to reduce bias in race classification. Additionally, novel metrics such as Symmetric Pairwise Error and Conditional Proportional Representation have been introduced to quantify bias in algorithms.
+
+One notable example in this domain is a paper that highlighted a bias in predicting the race of individuals, including a case where a method incorrectly predicted Obama's race as white. To address such bias, the paper proposed the use of posterior sampling of data implemented using Langevin dynamics, illustrating the ongoing efforts to mitigate racial bias in these algorithms.
+
+These papers collectively demonstrate the evolution of techniques and methodologies in gender and race detection in images, highlighting the importance of both accurate classification and the ongoing pursuit of fairness and bias reduction in these applications.
+
+
+**Search Strategy** 
+
+The search aims at identifying machine learning methods to detect gender/ race in images or video streams published as literature in peer-reviewed journals and conferences. The journals and conference proceedings used to look for these articles were narrowed down to the follow:
+
+| Journal/ Conference                                                                                                  | Number of articles |
+|----------------------------------------------------------------------------------------------------------------------|--------------------|
+| IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)                                                | 5                  |
+| International Conference on Machine Learning                                                                         | 2                  |
+| International Conference on Pattern Recognition                                                                      | 5                  |
+| NeurIPS                                                                                                              | 3                  |
+| International Conference on Computer Vision                                                                          | 3                  |
+| IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops                                          | 3                  |
+| American Sociological Association - Socius: Sociological Research for a Dynamic World                                | 1                  |
+| Pattern Recognition Letters                                                                                          | 1                  |
+| AAAI Conference on Artificial Intelligence                                                                           | 1                  |
+| ECCV                                                                                                                 | 1                  |
+| Journal of Mathematics                                                                                               | 1                  |
+| Journal of Informatics                                                                                               | 1                  |
+| International Conference on Advanced Robotics and Mechatronics                                                       | 1                  |
+| Computer Science and Electronic Engineering                                                                          | 1                  |
+| Quarterly Journal of Economics                                                                                       | 1                  |
+| Journal of Marketing Research                                                                                        | 1                  |
+| International Journal of Research in Marketing                                                                       | 1                  |
+| International Conference on Network and System Security (IEEE)                                                       | 1                  |
+| International Conference on Automatic Face and Gesture Recognition (FGR06)                                           | 1                  |
+| International Conference on System Science and Engineering                                                           | 1                  |
+| International Journal of Computer Vision                                                                             | 1                  |
+| IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)                                 | 1                  |
+| IEEE Computer Society Conference on Computer Vision and Pattern Recognition                                          | 1                  |
+| International Conference on Systems, Signals and Image Processing (IWSSIP)                                           | 1                  |
+| IEEE International Conference on Image Processing (ICIP)                                                             | 1                  |
+| IEEE International Conference on Automatic Face and Gesture Recognition                                              | 2                  |
+| IEEE International Conference on Computer Vision Workshops (ICCV Workshops)                                          | 1                  |
+| IEEE Transactions on Pattern Analysis and Machine Intelligence                                                       | 1                  |
+| International Conference on Smart Innovations in Design, Environment, Management, Planning and Computing (ICSIDEMPC) | 1                  |
+
+The following sources were used to retrieve these articles:
+The keywords searched for retrieving these articles were: race + classification + in + images or gender + classification + in + images
+
+| Source        | Number of Articles based on keyword search in abstract/title/keywords |
+|---------------|-----------------------------------------------------------------------|
+| ScienceDirect | 519                                                                   |
+| IEEE Xplore   | 622                                                                   |
+| arXiv         | 178                                                                   |
+| SSRN          | 25                                                                    |
